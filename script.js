@@ -10,3 +10,16 @@ const citates = [
 "En dansker er liges0m en flaske kethcup – først kommer der ikke noget – og så kommer det hele på én gang – Kjeld Abell",
 "Den, som ikke forstår spøg, forstår ikke dansk – Georg Brandes"
 ]
+
+let result = []
+function randomNumber(){
+    result[0] = citates[(Math.floor(Math.random()*citates.length))]
+    console.log(result[0])
+}
+
+let citate = document.querySelector(".siteFooter__quote")
+window.addEventListener("load", function(){
+    randomNumber()
+    citate.innerHTML = ""
+    citate.innerHTML = `${result[0]}`
+})
